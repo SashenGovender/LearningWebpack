@@ -85,16 +85,16 @@ export class Blackjack {
       // alert(`Player ${playerIndex} turn`);
       this.DisplayMessage(`Player ${playerIndex} turn`);
 
-      let playerInput: boolean = this.UserInput(`Hit Again?`);
+      let playerInput: number = this.UserInput(`Please input 1 to Hit or 0 to Proceed`);
 
-      while (playerInput === true && this.players[playerIndex].Score() < 21) {
+      while (playerInput === 1 && this.players[playerIndex].Score() < 21) {
         this.players[playerIndex].AddCard(this.GetCard());
         this.DisplayMessage(`Players after Hit Cards`);
         this.DisplayMessage(`-------------------------`);
         this.DisplayCards(this.players[playerIndex]);
 
         if (this.players[playerIndex].Score() < 21) {
-          playerInput = this.UserInput(`Hit Again?`);
+          playerInput = this.UserInput(`Please input 1 to Hit or 0 to Proceed`);
         }
       }
     }
@@ -154,7 +154,12 @@ export class Blackjack {
 
   // ---------------------------------------------------------------------------------------------------------------
 
-  private UserInput(message: string): boolean {
-      return  confirm(message);
+  private UserInput(message: string): number {
+    const input: string | null = prompt(`Please input 1 to Deal or 0 to Proceed`);
+    if (input) {
+      const choice = parseInt(input, 10);
+      return choice;
     }
+    return 0;
+  }
 }
