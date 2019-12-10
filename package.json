@@ -28,6 +28,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "common-js": "^0.3.8"
+    "common-js": "^0.3.8",
+    "serialize-javascript": "^2.1.2"
   }
 }
