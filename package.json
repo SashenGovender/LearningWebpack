@@ -30,6 +30,6 @@
   "dependencies": {
     "common-js": "^0.3.8",
     "minimist": "^1.2.5",
-    "serialize-javascript": "^2.1.2"
+    "serialize-javascript": "^3.1.0"
   }
 }
