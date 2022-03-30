@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "common-js": "^0.3.8",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "serialize-javascript": "^2.1.2"
   }
 }
